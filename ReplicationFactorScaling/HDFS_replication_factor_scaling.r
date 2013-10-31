@@ -67,6 +67,14 @@ for (probabilityX in c(0.01, 0.001, 0.0001) ) {
 		littleK[n]=currentLittleK
 	}
 
-	plot( bigN+1:maxN, littleK+bigK, pch=".", xlab="n (Nodes)",ylab="k (Replication Factor)", main=paste(" Probability of Machine Failure X = ",probabilityX), ylim=c(0,littleK[maxN]+bigK+1) )
+	plot(
+		 bigN+1:maxN, 
+		 littleK+bigK, 
+		 pch=".", 
+		 xlab="n (Nodes)",
+		 ylab="k (Replication Factor)", 
+		 main=paste(" Probability of Machine Failure X = ",probabilityX), 
+		 ylim=c(0,littleK[maxN]+bigK+1)
+	 )
 }
 dev.off()
