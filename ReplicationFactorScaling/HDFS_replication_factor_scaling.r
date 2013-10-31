@@ -1,17 +1,17 @@
 library(R.basic)
 library(Rmpfr)
 
-#############################################################################
+#######################################################################################
 # Experiment to look at how the replication factor should scale in a HDFS
 # file system in order to maintain probability of data loss below a given
 # threshold.
 # 
-# See Blog Post:
-#
+# For an explanation of what this experiment is about see the blog Post:
+# http://john-hawkins.blogspot.de/2013/10/maintaining-constant-probability-of.html
 #
 # John Hawkins 
 # 30 October2013
-#############################################################################
+#######################################################################################
 
 
 # Library version bugs out for large values
@@ -50,6 +50,7 @@ bigK = 3
 maxN = 1000
 
 # Run three experiments and plot them
+pdf("plots.pdf")
 par(mfrow=c(3,1))
 
 for (probabilityX in c(0.01, 0.001, 0.0001) ) {
@@ -66,6 +67,6 @@ for (probabilityX in c(0.01, 0.001, 0.0001) ) {
 		littleK[n]=currentLittleK
 	}
 
-	plot( bigN+1:maxN, littleK+bigK, pch=19, xlab="n (Nodes)",ylab="k (Replication Factor)", main=paste(" Probability of Machine Failure X=",probabilityX), ylim=c(0,littleK[maxN]+bigK+1) )
+	plot( bigN+1:maxN, littleK+bigK, pch=".", xlab="n (Nodes)",ylab="k (Replication Factor)", main=paste(" Probability of Machine Failure X = ",probabilityX), ylim=c(0,littleK[maxN]+bigK+1) )
 }
-
+dev.off()
