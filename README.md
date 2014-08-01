@@ -1,6 +1,11 @@
 Experiments
 ===========
 
-Bits and pieces of code for running numerical and statistical experiments.
+This project contains bits and pieces of code for running numerical and statistical experiments.
 
-Replication Factor scaling is a small script for estimating how the probability of data loss, cluster size and replication factor are related. 
+Replication Factor Scaling
+--------------------------
+Replication Factor Scaling is a small script for estimating how the probability of data loss, cluster size and replication factor are related.
+
+
+ 
