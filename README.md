@@ -13,4 +13,8 @@ App Downloads
 Some R scripts used for a Kaggle competition entry.
 
  
+Jelly Bean Jar
+--------------
+Jelly bean jar experiment variations
+
 

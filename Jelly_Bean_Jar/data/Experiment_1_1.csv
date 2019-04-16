@@ -1,0 +1,8 @@
+Name,Gender,Guess,Truth,Proxy
+Bao,M,138,207,Everyone else but me
+Petros,M,189,207,Cathy
+Denise,F,200,207,Chris
+Paul,M,235,207,Cathy
+Cathy,F,178,207,Paul
+Chris,M,7,207,Daniel
+Daniel,M,100,207,Denise
